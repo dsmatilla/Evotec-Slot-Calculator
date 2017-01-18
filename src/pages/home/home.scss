@@ -2,19 +2,27 @@ page-home {
 
 }
 
+ion-range {
+  min-height: 30px;
+  height: 30px;
+  max-height: 30px;
+}
+
+
 .left {
-  min-width: 100px;
-  width: 100px;
-  max-width: 100px;
+  min-width: 60px;
+  width: 60px;
+  max-width: 60px;
 }
 
 .right {
-  min-width: 100px;
-  width: 100px;
-  max-width: 100px;
+  min-width: 60px;
+  width: 60px;
+  max-width: 60px;
 }
 
 .result {
   min-width: 100px;
   min-height: 100px;
+  font-size: larger;
 }

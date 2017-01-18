@@ -1,7 +1,7 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Evotec Slot Calculator</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -48,66 +48,40 @@
         <ion-label range-right class="right">{{peso}} gr</ion-label>
       </ion-range>
     </ion-item>
+
+    <ion-item>
+      <ion-range min="0" max="8" step="0.001" snaps="false" [(ngModel)]="transmision" color="danger" disabled="true">
+        <ion-label range-left class="left">R. Transmision</ion-label>
+        <ion-label range-right class="right">{{transmision}}:1</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range min="0" max="60" step="0.01" snaps="false" [(ngModel)]="velocidad" color="danger" disabled="true">
+        <ion-label range-left class="left">Velocidad</ion-label>
+        <ion-label range-right class="right">{{velocidad}} cm/s</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range min="0" max="50" step="0.01" snaps="false" [(ngModel)]="vatios" color="danger" disabled="true">
+        <ion-label range-left class="left">Vatios</ion-label>
+        <ion-label range-right class="right">{{vatios}} W</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range min="0" max="20000" step="0.01" snaps="false" [(ngModel)]="rpmrueda" color="danger" disabled="true">
+        <ion-label range-left class="left">@RPM Rueda</ion-label>
+        <ion-label range-right class="right">{{rpmrueda}} RPM</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range min="0" max="50" step="0.01" snaps="false" [(ngModel)]="aceleracion" color="danger" disabled="true">
+        <ion-label range-left class="left">Aceleración</ion-label>
+        <ion-label range-right class="right">{{aceleracion}} cm/s²</ion-label>
+      </ion-range>
+    </ion-item>
   </ion-list>
-  <ion-badge item-right class="result">{{transmision}}:1</ion-badge>
-  <ion-badge item-right class="result">{{velocidad}} cm/s</ion-badge>
-  <ion-badge item-right class="result">{{vatios}} W</ion-badge>
-  <ion-badge item-right class="result">{{rpmrueda}} RPM</ion-badge>
-  <ion-badge item-right class="result">{{aceleracion}} cm/s2</ion-badge>
 </ion-content>
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-range min="0" max="50000" step="100" snaps="false" [(ngModel)]="rpm" color="secondary" (ionChange)="calc()">
-        <ion-label range-left class="left">R.P.M (12V)</ion-label>
-        <ion-label range-right class="right">{{rpm}}</ion-label>
-      </ion-range>
-    </ion-item>
-
-    <ion-item>
-      <ion-range min="50" max="400" step="1" snaps="false" [(ngModel)]="par" color="secondary" (ionChange)="calc()">
-        <ion-label range-left class="left">Par (12v)</ion-label>
-        <ion-label range-right class="right">{{par}} gr/cm</ion-label>
-      </ion-range>
-    </ion-item>
-
-    <ion-item>
-      <ion-range min="7" max="16" step="1" snaps="true" [(ngModel)]="pinon" color="secondary" (ionChange)="calc()">
-        <ion-label range-left class="left">Piñón</ion-label>
-        <ion-label range-right class="right">{{pinon}} ^</ion-label>
-      </ion-range>
-    </ion-item>
-
-    <ion-item>
-      <ion-range min="22" max="50" step="1" snaps="true" [(ngModel)]="corona" color="secondary" (ionChange)="calc()">
-        <ion-label range-left class="left">Corona</ion-label>
-        <ion-label range-right class="right">{{corona}} ^</ion-label>
-      </ion-range>
-    </ion-item>
-
-    <ion-item>
-      <ion-range min="14" max="28" step="0.1" snaps="false" [(ngModel)]="rueda" color="secondary" (ionChange)="calc()">
-        <ion-label range-left class="left">Rueda</ion-label>
-        <ion-label range-right class="right">{{rueda}} mm</ion-label>
-      </ion-range>
-    </ion-item>
-
-    <ion-item>
-      <ion-range min="40" max="200" step="1" snaps="false" [(ngModel)]="peso" color="secondary" (ionChange)="calc()">
-        <ion-label range-left class="left">Peso</ion-label>
-        <ion-label range-right class="right">{{peso}} gr</ion-label>
-      </ion-range>
-    </ion-item>
-  </ion-list>
-  <ion-badge item-right class="result">{{transmision}}:1</ion-badge>
-  <ion-badge item-right class="result">{{velocidad}} cm/s</ion-badge>
-  <ion-badge item-right class="result">{{vatios}} W</ion-badge>
-  <ion-badge item-right class="result">{{rpmrueda}} RPM</ion-badge>
-  <ion-badge item-right class="result">{{aceleracion}} cm/s2</ion-badge>
-</ion-content>>
